@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/cedc9bcbe9.js" crossorigin="anonymous"></script>
+        <style>
+@font-face {
+            font-family: Roboto;
+            src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+            font-family: Roboto-Slab;
+            src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
+ }
+@font-face {
+            font-family: Poppins;
+            src: url(fonts/Poppins-Medium.ttf);
+        }
+@font-face {
+            font-family: Red-Hat-Display;
+            src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+        }
+@font-face {
+            font-family: DM-Sans;
+            src: url(fonts/DMSans-VariableFont_opsz\,wght.ttf);
+        }       
+        /* Header */
+        header{
+            background-color: white; 
+        }
+ header > div > div:nth-child(4){
+            align-self: center;
+}
+header > div > div:nth-child(4) button{
+            font-family: roboto;
+            color: #801416;
+            font-weight: bold;
+            width: 200px;
+            height: 50px;
+            border: 2px solid #801416;
+            box-shadow: 2px 2px 5px black;
+            transition: background-color 0.4s;
+        }
+        header > div > div:nth-child(4) button:hover{
+            background-color: #fccc0a;
+        }
+        .icons > div{
+            margin-right: 30px;
+            font-size: 21px;
+            color: #801416;
+            transition: color 0.4s;
+        }
+        .icons > div:hover{
+            color: #fccc0a;
+            font-size: 21px;
+        }
+        .nav-link{
+            color: #801416;
+            font-family: roboto;
+            font-weight: bold;
+            border-right: 1px solid black;
+        }
+        .nav-link:hover{
+            color: #fccc0a;
+            border-bottom: 1px solid #fccc0a;
+        }
+   .main-nav {
+      background-color: #7a1212;
+      display: flex;
+      justify-content: center;
+    }
+    .main-nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0;
+    }
+    .nav-item {
+      position: relative;
+    }
+    .nav-item > a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s, color 0.2s;
+      border-radius: 2px 2px 0 0;
+    }
+
+    /* Hover effect for navbar links */
+    .nav-item:hover > a {
+      background-color: #ffffff;
+      color: #7a1212;
+    }
+
+    /* Arrow icon toggle on hover */
+    .arrow-down {
+      display: inline-block;
+      font-size: 0.85rem;
+    }
+    .arrow-up {
+      display: none;
+      font-size: 0.85rem;
+    }
+    .nav-item:hover .arrow-down {
+      display: none;
+    }
+    .nav-item:hover .arrow-up {
+      display: inline-block;
+    }
+
+    /* Dropdown Submenus */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 210px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      list-style: none;
+      padding: 6px 0;
+      border-radius: 0 0 4px 4px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(4px);
+      transition: all 0.2s ease;
+      z-index: 100;
+    }
+
+    .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li a {
+      color: #333333;
+      padding: 10px 18px;
+      text-decoration: none;
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background-color 0.15s, color 0.15s;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #f5f5f5;
+      color: #7a1212;
+    }
+
+/*top section */
+.admissions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
+    margin: left;
+    padding: 70px 10%;
+    gap: 30px;
+}
+.admission-2{
+width: 60%
+
+}
+.admission-2 h1{
+    color: maroon;
+    font-size: 64px;
+}
+.admission-2 p{
+    color: maroon;
+    font-size: 25px;
+}
+.main-buttons {
+    display: flex;
+    gap: 25px;
+}
+.apply-button,
+.contact-button {
+    width: 500px;
+    padding:20px;
+    border-radius: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+.apply-button {
+    background-color: #8b1117;
+    color: white;
+}
+.contact-button {
+    background-color: white;
+    color: #8b1117;
+    border: 3px solid #8b1117;
+}
+.admission-quick-info {
+width: 500px;
+padding: 30px;
+background-color: white;
+margin-right: auto;
+}
+.admission-quick-info h2 {
+color: maroon;
+font-size: 30px;
+ margin-top: 0;
+ }
+.admission-quick-info a {
+ display: block;
+color: maroon;
+text-decoration: none;
+text-align: center;
+ border: 2px solid maroon;
+border-radius: 30px;
+padding: 15px;
+margin: right;
+font-size: 20px;
+font-weight: bold;
+ }
+/*footer*/
+ .footer {
+      background: linear-gradient(rgba(110, 15, 15, 0.9), rgba(110, 15, 15, 0.9)), 
+                  url("C:\\Users\\dirk krish\\Documents\\For school\\MOLINO-Campus-Facade-2.2.jpg") center/cover no-repeat;
+      color: #ffffff;
+      padding: 40px 5% 30px;
+      font-size: 0.88rem;
+    }
+    .footer-columns {
+      display: flex;
+      justify-content: flex-end;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-col h4 {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+    .footer-col p {
+      margin-bottom: 8px;
+      color: #ffffff;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+    .footer-col a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .footer-col a:hover {
+      text-decoration: underline;
+    }
+
+</style>   
+<body>
+<header>
+<header>
+<div class="header-container container-fluid d-flex justify-content-between flex-wrap">
+<div class="flex-shrink-1">
+<img width ="640px" height = "59px"src="https://perpetualdalta.edu.ph/new/wp-content/uploads/2025/01/UNIVERSITY-OF-PERPETUAL-HELP-SYSTEM-DALTA-Long-MOL-Campus-1024x95.png">
+</div>
+<nav class="navbar navbar-expand-sm">
+<div class="container-fluid">
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapsible-navbar">
+<i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsible-navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">LAS PIÑAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MOLINO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CALAMBA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="icons d-flex align-items-center">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <button>PRE-REGISTER NOW!</button>
+                </div>
+            </div>
+        </div>
+    </header>
+  <nav class="main-nav">
+    <ul class="main-nav-list">
+
+      <li class="nav-item">
+        <a href="#">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="https://markboral75.github.io/perpetual-website/">About Molino Campus</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#">Admissions</a>
+      </li>
+
+      <!-- Academics Dropdown -->
+      <li class="nav-item">
+        <a href="#">
+          Academics
+          <span class="arrow-down">⌄</span>
+          <span class="arrow-up">⌃</span>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a href="#">Grade School</a></li>
+          <li><a href="#">Junior Business High School</a></li>
+          <li><a href="#">Senior High School</a></li>
+        </ul>
+      </li>
+
+      <!-- Campus Life Dropdown -->
+      <li class="nav-item">
+        <a href="#">
+          Campus Life
+          <span class="arrow-down">⌄</span>
+          <span class="arrow-up">⌃</span>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a href="#">Sports</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a href="#">Research</a>
+      </li>
+
+    </ul>
+  </nav>
+
+</div>
+
+</nav>
+<section class="admission">
+    <div class="admission-2">
+<h1> UPHSD Molino Campus — Admissions S.Y 2025-2026 </h1>
+<p>Join a community of achievers. Explore degree programs, scholarship opportunities and 
+    step-by-step admission guidance for incoming freshmen, transferees and graduate applicants.</p>
+        <div class="main-buttons">
+            <a href="#" class="apply-button">Apply For SY 2025-2026</a>
+            <a href="#" class="contact-button">Contact Us</a>
+        </div>
+    <div class="admission-quick-info">
+        <h2>Admissions Quick Info</h2>
+        <a href="#">Admission Requirements</a>
+        <a href="#">Payment Schemes</a>
+        <a href="#">Procedure on ID Processing</a>
+    </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Las Piñas Campus</h4>
+        <p>📞 (02) 8871-0639 local 103</p>
+        <p>📱 0968-6539-985</p>
+        <p>📱 0930-7213-869</p>
+        <p>✉ <a href="mailto:information@perpetualdalta.edu.ph">information@perpetualdalta.edu.ph</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Molino Campus</h4>
+        <p>📞 (046) 477-0602 local 112</p>
+        <p>📱 0975-638-0017</p>
+        <p>✉ <a href="mailto:admission.molino@perpetualdalta.edu.ph">admission.molino@perpetualdalta.edu.ph</a></p>
+        <p>📍 Molino Road, Molino III, City of Bacoor, 4102</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calamba Campus</h4>
+        <p>📞 (049) 834-1159 local 0</p>
+        <p>📱 0927-4921-304</p>
+        <p>✉ <a href="mailto:admission.calamba@perpetualdalta.edu.ph">admission.calamba@perpetualdalta.edu.ph</a></p>
+        <p>📍 Barangay Paciano Rizal, Calamba City, Laguna 4027</p>
+      </div>
+    </div>
+  </footer>
