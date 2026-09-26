@@ -1,0 +1,221 @@
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: Roboto-Slab;
+    src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: Red-Hat-Display;
+    src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: DM-Sans;
+    src: url(fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}       
+* {
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+.wrapper{
+    max-inline-size: 1500px;
+    margin-inline: auto;
+}
+/* Header */
+header{
+    background-color: white; 
+    min-width: 100%;
+}
+.header-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.header-wrapper > div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header > div > div:nth-child(4){
+    align-self: center;
+}
+#pre-register-button{
+    font-family: roboto;
+    color: #801416;
+    font-weight: bold;
+    max-width: 200px;
+    min-height: 50px;
+    border: 2px solid #801416;
+    box-shadow: 2px 2px 5px black;
+    transition: background-color 0.4s;
+}
+#pre-register-button:hover{
+    background-color: #fccc0a;
+}
+.icons{
+    display: flex;
+}
+.icons > div{
+    margin-right: 30px;
+    font-size: 21px;
+    color: #801416;
+    transition: color 0.4s;
+}
+.icons > div:hover{
+    color: #fccc0a;
+    font-size: 21px;
+}
+.header-navbar .nav-link{
+    color: #801416;
+    font-family: roboto;
+    font-weight: bold;
+    border-right: 1px solid black;
+}
+.header-navbar .nav-link:hover{
+    color: #fccc0a;
+    border-bottom: 1px solid #fccc0a;
+}
+/* Navbar */
+.main-navbar > div{
+    background-color: #801416;
+    font-family: roboto;
+}
+.main-navbar > div > div a.nav-link{
+    color: white !important;
+}
+.main-navbar > div > div a.dropdown-item{
+    color: black !important;
+    font-family: roboto;
+}
+.main-navbar > div > div a.dropdown-item {
+    color: black !important;
+    font-family: roboto;
+}
+.main-navbar .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+.main-navbar .nav-item.dropdown {
+    position: relative;
+}
+/* Main */
+.bar{
+    background-color: #fccc0a;
+    min-width: 100%;
+}
+.bar > div{
+    color: #801416;
+    font-family: poppins;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: center;
+    height: 30px;
+}
+.main{
+    display: grid;
+    gap: 60px;
+
+    @media (width > 600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.main iframe{
+    max-width: 100%;
+}
+.main > div:first-child{
+    font-family: poppins;
+    color:#801416;
+    font-size: 1.2rem;
+}
+.gov-logos{
+    display: grid;
+    justify-content: center;
+
+    @media (width > 600px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+}
+.gov-logos a{
+    transition: transform 0.4;
+}
+.gov-logos a:hover{
+    transform: scale(1.2 1.2);
+}
+.college-programs{
+    display: grid;
+    
+    @media (width > 600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.college-programs-buttons{
+    display: grid;
+    justify-content: center;
+}
+.college-programs-buttons a{
+    border: 2px solid #801416;
+    border-radius: 40px;
+    max-width: 690px;
+    min-height: 50px;
+    font-family: dm-sans;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-block: 10px;
+    transition: transform 0.4s;
+}
+.college-programs-buttons a:hover{
+    border: 2px solid #801416;
+    background-color: #ffcc0a;
+    transform: translateY(-10px);
+}
+.college-programs-buttons a{
+    text-decoration: none;
+    color: #801416;
+}
+/*footer*/
+.footer {
+background: linear-gradient(rgba(110, 15, 15, 0.9), rgba(110, 15, 15, 0.9)), 
+            url("C:\\Users\\dirk krish\\Documents\\For school\\MOLINO-Campus-Facade-2.2.jpg") center/cover no-repeat;
+color: #ffffff;
+padding: 40px 5% 30px;
+font-size: 0.88rem;
+}
+.footer-columns {
+display: flex;
+justify-content: flex-end;
+gap: 50px;
+max-width: 1200px;
+margin: 0 auto;
+}
+.footer-col h4 {
+font-size: 1.1rem;
+font-weight: bold;
+color: #ffcc00;
+margin-bottom: 15px;
+}
+.footer-col p {
+margin-bottom: 8px;
+color: #ffffff;
+display: flex;
+align-items: flex-start;
+gap: 8px;
+line-height: 1.4;
+}
+.footer-col a {
+color: #ffffff;
+text-decoration: none;
+}
+.footer-col a:hover {
+text-decoration: underline;
+}
